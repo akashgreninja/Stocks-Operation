@@ -2,6 +2,8 @@ const axios = require('axios');
 const cron = require('node-cron');
 const winston = require('winston');
 
+require('dotenv').config();
+
 const buyOrders = [];
 const sellOrders = [];
 
@@ -20,7 +22,7 @@ const MINIMUM_BALANCE = 1000;
 async function fetchStockData(symbol) {
     //api key loaded from the env
     try {
-        const apiKey = 'YOUR_ALPHA_VANTAGE_API_KEY';
+        const apiKey = process.env.ALPHA_VANTAGE_API_KEY;
         const response = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${symbol}&interval=1min&apikey=${apiKey}`, { timeout: 5000 });
         return response.data;
     } catch (error) {
