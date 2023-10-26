@@ -1,0 +1,13 @@
+{"level":"info","message":"Cron job is up","timestamp":"2021-10-01T12:00:00.000Z"}
+{"level":"info","message":"Trade executed: Bought 9 shares of TATA at 100 with Sold 10 shares of TATA at 110","timestamp":"2021-10-01T12:01:00.000Z"}
+{"level":"info","message":"Transaction cost: 10","timestamp":"2021-10-01T12:01:00.000Z"}
+{"level":"info","message":"Trade executed: Bought 4 shares of RELIANCE at 200 with Sold 5 shares of RELIANCE at 190","timestamp":"2021-10-01T12:02:00.000Z"}
+{"level":"info","message":"Transaction cost: 10","timestamp":"2021-10-01T12:02:00.000Z"}
+{"level":"error","message":"Insufficient funds to cover transaction cost.","timestamp":"2021-10-01T12:03:00.000Z"}
+{"level":"error","message":"Market is closed for region US.","timestamp":"2021-10-01T12:04:00.000Z"}
+{"level":"info","message":"Trade executed: Bought 8 shares of TATA at 100 with Sold 9 shares of TATA at 110","timestamp":"2021-10-01T12:05:00.000Z"}
+{"level":"info","message":"Transaction cost: 10","timestamp":"2021-10-01T12:05:00.000Z"}
+{"level":"info","message":"Trade executed: Bought 3 shares of RELIANCE at 200 with Sold 4 shares of RELIANCE at 190","timestamp":"2021-10-01T12:06:00.000Z"}
+{"level":"info","message":"Transaction cost: 10","timestamp":"2021-10-01T12:06:00.000Z"}
+{"level":"error","message":"Insufficient funds to cover transaction cost.","timestamp":"2021-10-01T12:07:00.000Z"}
+{"level":"error","message":"Market is closed for region EU.","timestamp":"2021-10-01T12:08:00.000Z"}
