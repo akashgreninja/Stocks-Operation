@@ -14,6 +14,13 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "node-cron": "^3.0.2",
-    "winston": "^3.11.0"
+    "winston": "^3.11.0",
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "data.js": "^0.12.11",
+    "express-validator": "^6.14.2",
+    "nodemailer": "^6.8.0",
+    "reaptcha": "^1.12.1",
+    "stylis-plugin-rtl": "^2.1.1"
   }
 }

@@ -34,7 +34,7 @@ async function fetchStockData(symbol) {
 
 // Function to execute a trade (to be implemented)
 function executeTrade(buyOrder, sellOrder, marketData) {
-  // Check if the buyer has enough balance to cover the transaction cost
+  // Check if the buyer has enough balance else ell him no
   if (buyOrder.price * buyOrder.quantity + TRANSACTION_COST > MINIMUM_BALANCE) {
     logger.error("Insufficient funds to cover transaction cost.");
     return;
@@ -82,29 +82,29 @@ function matchOrders(stockData) {
   }
 }
 
-// Route to add a buy order
-router.post("/buy", userAuth, (req, res) => {
-    const { symbol, price, quantity } = req.body;
-    buyOrders.push({ symbol, price, quantity });
-    res.send("Buy order added successfully.");
-  });
+// // Route to add a buy order
+// router.post("/buy", userAuth, (req, res) => {
+//     const { symbol, price, quantity } = req.body;
+//     buyOrders.push({ symbol, price, quantity });
+//     res.send("Buy order added successfully.");
+//   });
   
-  // Route to add a sell order
-  router.post("/sell", userAuth, (req, res) => {
-    const { symbol, price, quantity, region } = req.body;
-    sellOrders.push({ symbol, price, quantity, region });
-    res.send("Sell order added successfully.");
-  });
+//   // Route to add a sell order
+//   router.post("/sell", userAuth, (req, res) => {
+//     const { symbol, price, quantity, region } = req.body;
+//     sellOrders.push({ symbol, price, quantity, region });
+//     res.send("Sell order added successfully.");
+//   });
 
-// Route to get all buy orders
-router.get("/buy", (req, res) => {
-  res.send(buyOrders);
-});
+// // Route to get all buy orders
+// router.get("/buy", (req, res) => {
+//   res.send(buyOrders);
+// });
 
-// Route to get all sell orders
-router.get("/sell", (req, res) => {
-  res.send(sellOrders);
-});
+// // Route to get all sell orders
+// router.get("/sell", (req, res) => {
+//   res.send(sellOrders);
+// });
 
 // Schedule a cron job to run every 2 hours
 cron.schedule("*/10 * * * *", async () => {
